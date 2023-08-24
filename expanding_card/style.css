@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(37, 36, 36);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0; /* Added to remove default margin */
+}
+
+.container {
+    display: flex;
+    width: 90vw; /* Corrected typo */
+}
+
+.panel {
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 30px;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+    transition: flex 0.8s ease;
+}
+
+.panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    opacity: 0;
+    margin: 0;  
+
+}
+.panel.active{
+    flex:5;
+    color:snow;
+    opacity: 0.8;    
+}
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.7s;
+}
